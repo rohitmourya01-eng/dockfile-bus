@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        /* Header */
+
+        header{
+            background:#0f172a;
+            color:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h1{
+            color:#38bdf8;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-size:18px;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            height:350px;
+            background:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            text-align:center;
+        }
+
+        .hero h2{
+            font-size:45px;
+            margin-bottom:10px;
+        }
+
+        .hero p{
+            font-size:20px;
+        }
+
+        /* Search Section */
+
+        .search-box{
+            background:white;
+            width:80%;
+            margin:-40px auto 40px;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:15px;
+        }
+
+        .search-box input,
+        .search-box select{
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .btn{
+            background:#0284c7;
+            color:white;
+            border:none;
+            padding:12px;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .btn:hover{
+            background:#0369a1;
+        }
+
+        /* Bus List */
+
+        .buses{
+            padding:40px 20px;
+        }
+
+        .buses h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#0f172a;
+        }
+
+        .bus-card{
+            background:white;
+            width:80%;
+            margin:20px auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .bus-info h3{
+            color:#0284c7;
+            margin-bottom:10px;
+        }
+
+        .bus-info p{
+            margin:5px 0;
+            color:#444;
+        }
+
+        /* Footer */
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>BusGo</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Bookings</a>
+            <a href="#">Routes</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div>
+            <h2>Book Bus Tickets Online</h2>
+            <p>Safe • Fast • Comfortable Travel</p>
+        </div>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-box">
+
+        <input type="text" placeholder="From">
+
+        <input type="text" placeholder="To">
+
+        <input type="date">
+
+        <select>
+            <option>Select Bus Type</option>
+            <option>AC Sleeper</option>
+            <option>Non-AC</option>
+            <option>Luxury</option>
+        </select>
+
+        <button class="btn">Search Buses</button>
+
+    </section>
+
+    <!-- Bus List -->
+
+    <section class="buses">
+
+        <h2>Available Buses</h2>
+
+        <div class="bus-card">
+
+            <div class="bus-info">
+                <h3>Express Travels</h3>
+                <p>Delhi → Jaipur</p>
+                <p>Departure: 08:00 AM</p>
+                <p>Arrival: 01:00 PM</p>
+            </div>
+
+            <div>
+                <h3>₹799</h3>
+                <button class="btn">Book Now</button>
+            </div>
+
+        </div>
+
+        <div class="bus-card">
+
+            <div class="bus-info">
+                <h3>Royal Bus Service</h3>
+                <p>Chandigarh → Manali</p>
+                <p>Departure: 09:30 PM</p>
+                <p>Arrival: 06:00 AM</p>
+            </div>
+
+            <div>
+                <h3>₹1299</h3>
+                <button class="btn">Book Now</button>
+            </div>
+
+        </div>
+
+        <div class="bus-card">
+
+            <div class="bus-info">
+                <h3>FastLine Travels</h3>
+                <p>Mumbai → Pune</p>
+                <p>Departure: 07:00 AM</p>
+                <p>Arrival: 11:00 AM</p>
+            </div>
+
+            <div>
+                <h3>₹599</h3>
+                <button class="btn">Book Now</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 BusGo. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
